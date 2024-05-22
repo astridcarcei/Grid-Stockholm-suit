@@ -112,20 +112,34 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
 .Description {
     margin: 4rem 2rem ;
 }
+@media(max-width:700px)
+{
+    .Description{
+        margin:0;
+        }
+}
 .Description-p {
     width: 100%;
     max-width: 600px;
+    text-justify: auto;
     /* background-color: blueviolet; */
 }
+
 .Contents {
     margin: auto 2rem;
     width: 100%;
     max-width: 95vw;
-    background-color: gray;
+    /* background-color: gray; */
     display:grid;
     grid-template-columns: repeat(4,1fr);
     gap:25px;
    
+}
+@media(max-width:700px)
+{
+    .Contents{
+        margin:0;
+        gap: 5px;}
 }
 .Contents-content{
     /* background-color: red; */
@@ -146,8 +160,13 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-content: start;
-    
+    align-content: start; 
+}
+@media(max-width:700px)
+{
+    .Show{
+        margin:1rem auto;
+        }
 }
 .Show-a{
     
@@ -155,6 +174,10 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
 .Show-img{
     width: 30px;
     height: 18px;
+}
+@media (max-width:700px)
+{ 
+    .Show-img {display: none;}
 }
 .Footer {
     margin: auto;
