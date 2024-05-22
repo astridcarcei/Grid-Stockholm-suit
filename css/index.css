@@ -51,9 +51,9 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
     text-decoration: none;
 }
 .Header{
-    margin: 30px auto;
+    margin: 2rem auto;
     width: 100%;
-	max-width: 92vw;
+	max-width: 95vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -61,23 +61,21 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
 }
 .Header-h1 {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
 }
 .Header-logo {
-   width: 100%;
-   width: 100px ;
- 
-   display: block;
+   width: 100px;
+   width: 60px ;
   
 }
 .Header-img{
     width: 100%;
     height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
 }
 
@@ -86,7 +84,7 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
     max-width: 300px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 .Header-ul {
@@ -102,85 +100,85 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
 .Header-li {
     list-style: none;
 }
+.Header-a--subraya{
+    text-decoration: underline;
+}
 .Header-a {
-
 }
 
 .Main{
    
 }
-
 .Description {
-    margin: 50px auto;
+    margin: 4rem 2rem ;
 }
 .Description-p {
     width: 100%;
-    padding: 0 50px;
     max-width: 600px;
     /* background-color: blueviolet; */
 }
-
-.Content {
-   
+.Contents {
+    margin: auto 2rem;
     width: 100%;
-    /* background: lightgray; */
+    max-width: 95vw;
+    background-color: gray;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:25px;
+   
+}
+.Contents-content{
+    /* background-color: red; */
+    position: relative;
+}
+.Contents-img {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left: 0; 
+}
+.Show {
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 300px;
+    /* background-color: blueviolet; */
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: end;
-    align-items: start;
-    gap:20px
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: start;
+    
+}
+.Show-a{
+    
+}
+.Show-img{
+    width: 30px;
+    height: 18px;
+}
+.Footer {
+    margin: auto;
+    max-width: 96%;
+	border-top: 1px solid gray;
+	padding:20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;  
 }
 
-.Content-fila {
-    margin: auto 50px;
+.Footer-derechos {
     width: 100%;
-    max-width: 92vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
-	gap: 15px;
-   
 }
-
-.Content-a {
-    width: 100%;
-    display: block;
-
-}
-.Content-img {
-    width: 100%;
-    max-width: 400px;
-    max-height: 400px;
-  /* object-fit: none;
-  object-position: 10%; */
-}
-
-.Show {
-    margin: 50px auto;
-    width: 100%;
-    max-width: 100px;
-}
-.Footer {
-    margin: 80px auto;
-    max-width: 92%;
-	border-top: 1px solid gray;
-	padding-top:20px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: start;
-	  
-}
-
-		
-
-.Footer-derechos {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px
+@media (max-width:700px)
+{
+    .Footer-derechos {
+        display: none;
+    }
 }
 
 .Footer-span {
@@ -189,14 +187,20 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a {
 
 .Footer-redes {
     width: 100%;
-    max-width: 20vw;
 }
+
 .Footer-ul {
     display:flex;
     flex-flow: row nowrap;
     justify-content: end;
     align-items: center;
     gap: 20px;
+}
+@media (max-width:700px)
+{.Footer-ul
+{ flex-direction: column;
+   align-content: center;
+gap:2px;}
 }
 
 .Footer-li {
